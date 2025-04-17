@@ -1,3 +1,42 @@
+"""
+===========================================================================
+ Juniper Configuration Parser & Report Generator
+===========================================================================
+
+This script parses a Juniper SRX firewall configuration exported in 'set' format
+(from a .txt file), extracts key configuration elements, and generates a 
+comprehensive Excel report with structured tabs for each major category.
+
+Key features:
+-------------
+- Extracts and categorizes configuration lines into the following tabs:
+    • System Settings
+    • Interfaces
+    • Security Zones
+    • Address Book
+    • NAT Rules
+    • Security Policies
+    • BGP/Protocols
+    • Static Routes
+    • Applications
+    • Firewall Filters
+    • Raw Config (full unprocessed text)
+
+- Supports multi-line parsing logic for complex rules (e.g., policies, NAT, BGP).
+- Outputs a human-readable Excel (.xlsx) file ideal for documentation, audits,
+  and firewall review sessions.
+
+Usage:
+------
+1. Place the Juniper configuration file (e.g., 'juniper_config.txt') in the same folder.
+2. Update the `config_file_path` variable if needed.
+3. Run the script using Python 3.x.
+4. The Excel report will be saved as 'juniper_config_report.xlsx'.
+
+Author: Chinedu Omenkukwu
+Date: 2020-04-12
+"""
+
 # ===============================================
 #    JUNIPER CONFIG PARSER - Report Generator
 # ===============================================
